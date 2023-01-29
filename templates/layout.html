@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>Stable Diffusion by Toon Lunk</title>
+    {% endif %}
+    <title>Stable Diffusion by Toon Lunk</title>
+    <link rel="stylesheet", href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

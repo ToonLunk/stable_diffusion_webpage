@@ -1,0 +1,166 @@
+* {
+    /* google 16-bit font */
+    font-family: 'Roboto Mono', monospace;
+
+    /* import these fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap');
+}
+
+/* make the background dark grey */
+body {
+    background-color: rgb(28, 28, 28);
+}
+
+h1 {
+    margin: 0;
+    color: rgb(255, 255, 255);
+    /* centered */
+    text-align: center;
+}
+
+h2 {
+    /* centered */
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.content-section {
+    /* centered */
+    text-align: center;
+    /* make the background dark grey */
+    background-color: rgb(28, 28, 28);
+    /* make the text white */
+    color: rgb(255, 255, 255);
+    /* make the text big */
+    font-size: 20px;
+    /* make the width 80% */
+    width: 70%;
+    /* centered */
+    margin: 0 auto;
+
+    padding: 4px;
+    margin-top: 12px;
+}
+
+.content-section p {
+    padding:0;
+    margin: 0;
+    font-size: medium;
+    font-style: italic;
+    color: rgb(170, 170, 170);
+}
+
+.lastImg {
+    width: 50%;
+}
+
+.past {
+    border: white 1px solid;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 12px;
+}
+
+
+.past ul {
+    /* centered */
+    text-align: center;
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    /* remove styling */
+    list-style-type: none;
+}
+
+/* make list look cool */
+.pastImages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pastImages li {
+    margin: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 300px;
+}
+
+.pastImages li img {
+    width: 100%;
+}
+
+/* prevent text from going out of div */
+.pastImages li p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* on hover, show full text in tooltip */
+.pastImages li:hover p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    background-color: white;
+    width: 400%;
+    color: black;
+    /* move tooltip to the left */
+    margin-left: -150%;
+    font-size: 20px;
+}
+
+.pastPrompts li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.border-bottom {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color:rgb(255, 255, 255)
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.submitBtn {
+    /* centered */
+    text-align: center;
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+/* make the input look big and awesome */
+.form-control {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgb(28, 28, 28);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 6px;
+}
+
+/* style pastPrompts ul to take up 80% width and use white text */
+.pastPrompts {
+    width: 80%;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+}
