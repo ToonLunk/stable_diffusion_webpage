@@ -81,3 +81,4 @@ def generate():
 # to not have to restart the server every time you make a change
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+    input("Press Enter to exit...")
