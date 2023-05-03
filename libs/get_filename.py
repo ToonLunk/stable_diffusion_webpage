@@ -1,7 +1,12 @@
 from libs.requirements import *
 
 def getFilename(prompt):
-    nlp = spacy.load("en_core_web_sm")
+    try:
+        nlp = spacy.load("en_core_web_sm")
+    except:
+        print("INFO: Downloading 'en_core_web_sm'...")
+        os.system("python -m spacy download en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
 
     doc = nlp(prompt)
     
