@@ -17,6 +17,9 @@ def getFilename(prompt):
         if token.pos_ not in remove:
             filename += token.text + "_" # add an underscore to separate the words
     filename = filename[:-1] # remove the last underscore
+    # make sure filename isn't too long and if it is, use only the 6 most important words
+    if len(filename) > 40:
+        filename = "_".join(filename.split("_")[:6])
     print("filename: ", filename)
     # check if the filename exists already
     if os.path.exists(f"./static/img/output/{filename}.png"):

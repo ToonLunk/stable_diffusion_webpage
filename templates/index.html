@@ -1,6 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
-<h1>Generate AI images using Stable Diffusion</h1>
+<h1>Generate AI images using Analog Diffusion</h1>
 <!-- if fileName exists, load fileName -->
 {% if fileName %}
     <div class="content-section">
@@ -12,9 +12,9 @@
     <form method="POST" action="">
         {{ form.hidden_tag() }}
         <fieldset class="form-group">
-            <legend class="border-bottom">Stable Diffusion GUI by Toon Lunk | v0.2</legend>
+            <legend class="border-bottom">Analog Diffusion GUI by Toon Lunk | v0.3</legend>
             <div class="form-group">
-                <label for="prompt" class="form-label">Please enter the prompt for Stable Diffusion below</label>
+                <label for="prompt" class="form-label">Please enter the prompt below</label>
                 {{ form.prompt(class="form-control", placeholder="an astronaut wearing a cowboy hat on the moon", color="white") }}
             </div>
             <div class="form-group">
