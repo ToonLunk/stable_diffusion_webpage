@@ -3,6 +3,7 @@ from diffusers import StableDiffusionPipeline, DPMSolverMultistepScheduler
 import torch
 import tkinter as tk
 import tkinter.ttk as ttk
+import sys
 
 # for web page
 import flask

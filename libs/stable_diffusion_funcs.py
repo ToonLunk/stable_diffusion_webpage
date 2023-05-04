@@ -6,18 +6,14 @@ def generate_image(prompt, fileName):
     print(f"GPU is available: {torch.cuda.is_available()}")
     # empty the cache for better performance
     torch.cuda.empty_cache()
-    try:
-        # path to the Stable Diffusion model
-        modelId = "D:\ML Models\stable-diffusion-2-1"
-        pipeline = StableDiffusionPipeline.from_pretrained(
-        modelId, torch_dtype=torch.float16)
-        pipeline.scheduler = DPMSolverMultistepScheduler.from_config(
-            pipeline.scheduler.config)
-        pipeline = pipeline.to("cuda")
-        pipeline.enable_attention_slicing()
-    except:
-        print("ERROR: Exception creating pipeline")
-        return False
+    # path to the Stable Diffusion model
+    modelId = "D:\ML Models/Analog-Diffusion"
+    pipeline = StableDiffusionPipeline.from_pretrained(
+    modelId, torch_dtype=torch.float16)
+    pipeline.scheduler = DPMSolverMultistepScheduler.from_config(
+        pipeline.scheduler.config)
+    pipeline = pipeline.to("cuda")
+    pipeline.enable_attention_slicing()
 
     try:
         # generate an image
